@@ -24,6 +24,7 @@
 		1F1D89C42BD12C76005FAEA9 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89C32BD12C76005FAEA9 /* SecondVC.swift */; };
 		1F1D89C62BD13E59005FAEA9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89C52BD13E59005FAEA9 /* UIView+Extension.swift */; };
 		1F1D89C92BD13EC6005FAEA9 /* BottomGradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89C82BD13EC6005FAEA9 /* BottomGradientImageView.swift */; };
+		1F1D89CB2BD15455005FAEA9 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89CA2BD15455005FAEA9 /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1F1D89C32BD12C76005FAEA9 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		1F1D89C52BD13E59005FAEA9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "../../../../../../Documents/UIView+Extension.swift"; sourceTree = "<group>"; };
 		1F1D89C82BD13EC6005FAEA9 /* BottomGradientImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomGradientImageView.swift; path = ../../../../../../Documents/BottomGradientImageView.swift; sourceTree = "<group>"; };
+		1F1D89CA2BD15455005FAEA9 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegmentedControl.swift; path = ../../../../../../Documents/CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				1F1D89BD2BD11ED4005FAEA9 /* Reachability.swift */,
 				1F1D89C82BD13EC6005FAEA9 /* BottomGradientImageView.swift */,
+				1F1D89CA2BD15455005FAEA9 /* CustomSegmentedControl.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				1F1D89972BD106A6005FAEA9 /* SceneDelegate.swift in Sources */,
 				1F1D89C22BD11F5F005FAEA9 /* URLRequest+Ext.swift in Sources */,
 				1F1D89C02BD11F0F005FAEA9 /* EndPointItems.swift in Sources */,
+				1F1D89CB2BD15455005FAEA9 /* CustomSegmentedControl.swift in Sources */,
 				1F1D89B62BD11C55005FAEA9 /* Roles.swift in Sources */,
 				1F1D89BE2BD11ED4005FAEA9 /* Reachability.swift in Sources */,
 				1F1D89BB2BD11E93005FAEA9 /* MessageManager.swift in Sources */,
@@ -425,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rajvek.PlatePalace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntech.PlatePalace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -461,7 +465,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rajvek.PlatePalace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntech.PlatePalace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

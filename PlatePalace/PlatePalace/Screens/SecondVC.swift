@@ -14,12 +14,35 @@ class MessListCell: UITableViewCell{
 class SecondVC: UIViewController {
 
     @IBOutlet weak var messList: UITableView!
+    var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        uiSearchBarConfig()
     }
     
+    private func uiSearchBarConfig(){
+        // Create a UISearchController instance
+        searchController = UISearchController(searchResultsController: nil)
+        
+        // Configure the search bar
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.tintColor = .systemOrange
+        
+        // Assign the searchController to the navigationItem
+        navigationItem.searchController = searchController
+        
+        // Ensure the search bar does not remain on the screen if the user navigates to another view controller while the UISearchController is active
+        definesPresentationContext = true
+    }
+}
+
+extension SecondVC: UISearchBarDelegate, UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
 }
 
 extension SecondVC: UITableViewDataSource{

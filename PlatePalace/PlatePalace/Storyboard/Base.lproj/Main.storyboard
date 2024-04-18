@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Explore-->
+        <!--SecondVC-->
         <scene sceneID="aQs-Z6-81o">
             <objects>
                 <viewController storyboardIdentifier="SecondVC" id="TFJ-W2-lyn" customClass="SecondVC" customModule="PlatePalace" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gu1-xe-Fv6">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessListCell" rowHeight="232" id="ihe-aF-PFA" customClass="MessListCell" customModule="PlatePalace" customModuleProvider="target">
@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqQ-vV-Gfj">
-                                                    <rect key="frame" x="16" y="8" width="361" height="216"/>
+                                                    <rect key="frame" x="16" y="0.0" width="361" height="216"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="50F-sQ-Pes">
                                                             <rect key="frame" x="8" y="8" width="345" height="200"/>
@@ -125,8 +125,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="cqQ-vV-Gfj" secondAttribute="trailing" constant="16" id="Be8-Xc-pXN"/>
-                                                <constraint firstAttribute="bottom" secondItem="cqQ-vV-Gfj" secondAttribute="bottom" constant="8" id="ENC-zk-vak"/>
-                                                <constraint firstItem="cqQ-vV-Gfj" firstAttribute="top" secondItem="aZh-Z8-vpc" secondAttribute="top" constant="8" id="Wet-lR-2Pc"/>
+                                                <constraint firstAttribute="bottom" secondItem="cqQ-vV-Gfj" secondAttribute="bottom" constant="16" id="ENC-zk-vak"/>
+                                                <constraint firstItem="cqQ-vV-Gfj" firstAttribute="top" secondItem="aZh-Z8-vpc" secondAttribute="top" id="Wet-lR-2Pc"/>
                                                 <constraint firstItem="cqQ-vV-Gfj" firstAttribute="leading" secondItem="aZh-Z8-vpc" secondAttribute="leading" constant="16" id="twc-IQ-7yA"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -146,13 +146,25 @@
                         <viewLayoutGuide key="safeArea" id="Nop-0p-s5r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gu1-xe-Fv6" firstAttribute="top" secondItem="Nop-0p-s5r" secondAttribute="top" id="8Y4-9k-aUe"/>
+                            <constraint firstItem="Gu1-xe-Fv6" firstAttribute="top" secondItem="JsR-Ix-ymI" secondAttribute="top" id="8Y4-9k-aUe"/>
                             <constraint firstItem="Gu1-xe-Fv6" firstAttribute="leading" secondItem="JsR-Ix-ymI" secondAttribute="leading" id="CIp-zZ-SQS"/>
                             <constraint firstAttribute="bottom" secondItem="Gu1-xe-Fv6" secondAttribute="bottom" id="JNy-1V-7tW"/>
                             <constraint firstAttribute="trailing" secondItem="Gu1-xe-Fv6" secondAttribute="trailing" id="lcc-hN-AGk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Explore" id="Qf9-Ty-SKF"/>
+                    <navigationItem key="navigationItem" id="Qf9-Ty-SKF">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dl0-zR-xMM" customClass="CustomSegmentedControl" customModule="PlatePalace" customModuleProvider="target">
+                            <rect key="frame" x="26" y="5.6666666666666679" width="341" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Mess"/>
+                                <segment title="On-Side"/>
+                                <segment title="Home Delivery"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" systemColor="systemOrangeColor"/>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="messList" destination="Gu1-xe-Fv6" id="dDR-ie-8sg"/>
                     </connections>
@@ -168,14 +180,70 @@
                     <view key="view" contentMode="scaleToFill" id="MB5-hq-cN2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-LF-u3p">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAV-Kv-iUW">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="147.33333333333334"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LmS-Oo-kxB">
+                                                <rect key="frame" x="20" y="19.999999999999993" width="353" height="107.33333333333331"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ISZ-18-B81" userLabel="HeaderStack">
+                                                        <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="107.33333333333333"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-G6-TvO">
+                                                                <rect key="frame" x="19" y="1" width="80" height="78.666666666666671"/>
+                                                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="80" id="Rr6-H6-Qxv"/>
+                                                                    <constraint firstAttribute="height" constant="80" id="pie-nJ-ZTh"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vivek Lokhande" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61q-Gh-BRy">
+                                                                <rect key="frame" x="0.0" y="88" width="117.66666666666667" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LmS-Oo-kxB" firstAttribute="leading" secondItem="FAV-Kv-iUW" secondAttribute="leading" constant="20" id="VoF-Mh-YrP"/>
+                                            <constraint firstAttribute="bottom" secondItem="LmS-Oo-kxB" secondAttribute="bottom" constant="20" id="hWh-ur-xm9"/>
+                                            <constraint firstItem="LmS-Oo-kxB" firstAttribute="top" secondItem="FAV-Kv-iUW" secondAttribute="top" constant="20" id="vu7-ae-ZqP"/>
+                                            <constraint firstAttribute="trailing" secondItem="LmS-Oo-kxB" secondAttribute="trailing" constant="20" id="wgD-fd-cZJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FAV-Kv-iUW" secondAttribute="bottom" id="Anb-6s-DJI"/>
+                                    <constraint firstAttribute="trailing" secondItem="FAV-Kv-iUW" secondAttribute="trailing" id="TTR-ES-c0j"/>
+                                    <constraint firstItem="FAV-Kv-iUW" firstAttribute="top" secondItem="RgR-LF-u3p" secondAttribute="top" id="XDd-c6-0fg"/>
+                                    <constraint firstItem="FAV-Kv-iUW" firstAttribute="leading" secondItem="RgR-LF-u3p" secondAttribute="leading" id="uSo-g4-tc9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TKT-7f-BFm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FAV-Kv-iUW" firstAttribute="width" secondItem="MB5-hq-cN2" secondAttribute="width" id="ApM-iP-9Ak"/>
+                            <constraint firstItem="RgR-LF-u3p" firstAttribute="leading" secondItem="TKT-7f-BFm" secondAttribute="leading" id="Kpy-O9-OCL"/>
+                            <constraint firstAttribute="bottom" secondItem="RgR-LF-u3p" secondAttribute="bottom" id="P2Y-VT-6PF"/>
+                            <constraint firstItem="RgR-LF-u3p" firstAttribute="trailing" secondItem="TKT-7f-BFm" secondAttribute="trailing" id="h7k-7j-EON"/>
+                            <constraint firstItem="RgR-LF-u3p" firstAttribute="top" secondItem="TKT-7f-BFm" secondAttribute="top" id="yQt-A2-00c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Goc-y5-I5i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZx-ss-QGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="913"/>
+            <point key="canvasLocation" x="1536.6412213740457" y="912.67605633802816"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="S7l-ib-zJh">
@@ -206,8 +274,8 @@
                         <imageReference key="selectedImage" image="magnifyingglass" catalog="system" symbolScale="medium" variableValue="1"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hh5-Ke-CwI">
-                        <rect key="frame" x="0.0" y="59" width="393" height="97"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hh5-Ke-CwI">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -246,7 +314,11 @@
         <image name="dummy" width="2897" height="2400"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
