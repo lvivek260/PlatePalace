@@ -22,6 +22,7 @@
 		1F1D89BE2BD11ED4005FAEA9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89BD2BD11ED4005FAEA9 /* Reachability.swift */; };
 		1F1D89C02BD11F0F005FAEA9 /* EndPointItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89BF2BD11F0F005FAEA9 /* EndPointItems.swift */; };
 		1F1D89C22BD11F5F005FAEA9 /* URLRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89C12BD11F5F005FAEA9 /* URLRequest+Ext.swift */; };
+		1F1D89C42BD12C76005FAEA9 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D89C32BD12C76005FAEA9 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1F1D89BD2BD11ED4005FAEA9 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1F1D89BF2BD11F0F005FAEA9 /* EndPointItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointItems.swift; sourceTree = "<group>"; };
 		1F1D89C12BD11F5F005FAEA9 /* URLRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ext.swift"; sourceTree = "<group>"; };
+		1F1D89C32BD12C76005FAEA9 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				1F1D89982BD106A6005FAEA9 /* ViewController.swift */,
+				1F1D89C32BD12C76005FAEA9 /* SecondVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1D89B42BD11C3D005FAEA9 /* CustomUserDefaults.swift in Sources */,
+				1F1D89C42BD12C76005FAEA9 /* SecondVC.swift in Sources */,
 				1F1D89B22BD11C30005FAEA9 /* AppStoryboard.swift in Sources */,
 				1F1D89992BD106A6005FAEA9 /* ViewController.swift in Sources */,
 				1F1D89BC2BD11E93005FAEA9 /* APIManager.swift in Sources */,
